@@ -1,15 +1,34 @@
-students = [
+games = [
 {
-    "name": "henry",
-    "school": "Tech",
-    "birthday": "07/15/11",
+    "name": "smash bros",
+    "price": 59.99,
+    "divice": "switch"
+
 },
 {
-    "name": "ayaan",
-    "school": "Tech",
-    "birthday":"06/27/11"
+    "name": "persona 5 royal",
+    "price": 59.99,
+    "divice": "playstation 5"
+
+},
+{
+    "name": "xenoblade chronicals deffinative addition",
+    "price": 59.99,
+    "divice": "switch"
 }
 ]
+cart = []
+cartTotal = 0
+for index, i in enumerate(games):
+    print(index, i["name"])
 
-for index, i in enumerate(students):
-    print(index, ":", i["name"],i["school"],i["birthday"])
+while 1 ==1:
+    gameNum = int(input("What game would you like to purchase (game num)"))
+    cart.append({games[gameNum]["name"]})
+    cartTotal = cartTotal + {games[gameNum]["price"]}
+    if input("do you want to buy more (y/n)") == "n":
+        print(cart)
+        print(f"your cart total is {cartTotal}")
+        break
+
+
